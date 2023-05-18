@@ -33,5 +33,5 @@ func (h *authHandler) Register(c echo.Context) error {
 	if err := h.au.RegisterAndSendEmail(&u, ctx); err != nil {
 		return c.JSON(500, err.Error())
 	}
-	return c.JSON(200, "success")
+	return c.JSON(200, "register successfully completed")
 }
